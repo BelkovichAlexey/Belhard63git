@@ -1,5 +1,5 @@
 print('hello')
 print('hello')
-print('hello')
+print('lo')
 print('hello')
 print('hello good')
