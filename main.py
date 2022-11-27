@@ -1,5 +1,0 @@
-print('hello')
-print('hello')
-print('hello')
-print('hello')
-print('hello3 good')
