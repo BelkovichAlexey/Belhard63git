@@ -1,3 +1,3 @@
 x = -21 % 10
-
-print(x)
+y = 33
+print(x,y)
