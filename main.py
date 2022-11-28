@@ -4,7 +4,6 @@ print(x,y)
 print('hello')
 print('hello')
 print('hello')
-print('hello')
-print('hello')
+
 print('Hard')
 
