@@ -1,0 +1,5 @@
+z = input('Name:')
+x = input('Age:')
+c = input('City:')
+q = 'My name is {}. I am {} years old. I am from {}, Thanks!' .format(z, x, c)
+print(q)
