@@ -6,7 +6,7 @@ def binary_search(list, element):
     while start <= end:
         centr = (start + end) // 2
         if element == centr:
-            return list.index(element)
+            return list.index(element), centr
         else:
             if element > centr:
                 start = centr +1
