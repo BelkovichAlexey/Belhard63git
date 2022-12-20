@@ -25,16 +25,17 @@ class Button:
             raise TypeError
         cls.color = new_color
 
-    # def press(self):
-    #     self.is_pressed = True
+    def press(self):
+        self.is_pressed = True
 
     def __str__(self):
         return f'{self.text}'
 
     # def to_dict(self):
-    #     {self.widht: widht,
-    #      self.heiht: heiht,
-    #      self.text: text
+    #     dict = {
+    #     self.widht: widht,
+    #     self.heiht: heiht,
+    #     self.text: text
     #     }
 
 enter = Button(widht=12, height=5, text='enter')
@@ -43,7 +44,7 @@ print(Button.color)
 
 print(enter.press)
 print(enter.text)
-print(enter.to_dict)
+
 
 
 
