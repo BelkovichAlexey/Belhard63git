@@ -1,3 +1,6 @@
+
+# 1
+
 class Car(object):
 
     def __init__(self, color:str, count_passenger_seat:int, is_baby_seat:bool, is_busy:bool):
@@ -10,6 +13,8 @@ class Car(object):
     def __str__(self)-> str:
         return f'Car {self.count_passenger_seat=} {self.is_baby_seat=} {self.is_busy=} {self.color=}'
 
+
+# 2
 
 class Taxi(object):
 
@@ -26,20 +31,31 @@ class Taxi(object):
                 car.is_busy = True
                 return car
 
+# 3
 
 class Category(object):
     categories = []
     # name = None
 
     @classmethod
-    def add(cls, categories:str, name:str) -> int:
-        cls.categories = categories
-        for name in cls.categories:
-            if name not in cls.categories:
-                cls.categories = cls.categories.append(name)
+    def add(cls, new_categories:str) -> int:
+        cls.categories = new_categories
+        for name in new_categories:
+            if name not in new_categories:
+                new_categories = new_categories.append(name)
             else:
                 raise ValueError ('данная категория уже существует')
-            return cls.categories.index(name)
+            return new_categories.index(name)
+
+    # @classmethod
+    # def get(cls):
+    #     return
+    #
+
+
+# 4
+
+
 
 
 
