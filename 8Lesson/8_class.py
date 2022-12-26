@@ -47,13 +47,6 @@ class Button:
 
 
 
-enter = Button(widht=12, height=5, text='enter')
-Button.change_color('red')
-print(Button.color)
-
-print(enter.press)
-print(enter.text)
-
 
 
 
