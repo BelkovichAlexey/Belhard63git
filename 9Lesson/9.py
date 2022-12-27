@@ -35,30 +35,34 @@ class Taxi(object):
 
 class Category(object):
     categories = []
-    # name = None
+
+    # name=[]
+    # index=[index]
+    # index_name = [index,name]
+    @classmethod
+    def add(cls,new_category, name):
+        cls.categories = new_category
+        if name in new_category:
+            raise ValueError('already exist')
+        else:
+            new_category.append(name)
+            return new_category.index(name)
 
     @classmethod
-    def add(cls, new_categories:str) -> int:
-        cls.categories = new_categories
-        for name in new_categories:
-            if name not in new_categories:
-                new_categories = new_categories.append(name)
-            else:
-                raise ValueError ('данная категория уже существует')
-            return new_categories.index(name)
+    def get(cls,new_category,index):
+        if index not in new_category:
+            raise ValueError
+        else:
+            return new_category[index]
 
-    # @classmethod
-    # def get(cls):
-    #     return
-    #
+    @classmethod
+    def delete(cls,new_category, index):
+        new_category.pop(index)
 
-
-# 4
-
-
-
-
-
-
-
-
+    @classmethod
+    def update(cls,new_category,index_name ):
+        cls.categories = new_category
+        if index_name not in new_category:
+            new_category.insert(index_name)
+        else:
+            raise ValueError
