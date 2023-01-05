@@ -29,8 +29,8 @@ cur.execute('''
 cur.execute('''
     CREATE TABLE IF NOT EXISTS orders(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user_id INTEGER, 
-    status_id INTEGER,
+    user_id INTEGER NOT NULL, 
+    status_id INTEGER NOT NULL,
     FOREIGN KEY(user_id) REFERENCES users(id),
     FOREIGN KEY(status_id) REFERENCES statuses(id)
     );
@@ -40,9 +40,9 @@ cur.execute('''
 cur.execute('''
     CREATE TABLE IF NOT EXISTS products(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title VARCHAR(36),
-    description VARCHAR(140),
-    category_id INTEGER,
+    title VARCHAR(36) NOT NULL,
+    description VARCHAR(140) NOT NULL,
+    category_id INTEGER NOT NULL,
     FOREIGN KEY(category_id) REFERENCES categories(id)
     );
 ''')
@@ -50,8 +50,8 @@ cur.execute('''
 cur.execute('''
     CREATE TABLE IF NOT EXISTS order_items(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    order_id INTEGER,
-    product_id INTEGER,
+    order_id INTEGER NOT NULL,
+    product_id INTEGER NOT NULL,
     FOREIGN KEY(order_id) REFERENCES orders(id),
     FOREIGN KEY(product_id) REFERENCES products(id)
     );
